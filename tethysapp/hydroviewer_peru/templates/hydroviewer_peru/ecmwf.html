@@ -603,53 +603,45 @@
 </div>
 
 <!-- About Modal -->
-<div
-  class="modal fade"
-  id="about"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="about-modal-label"
->
+<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="about-modal-label">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <button
-          type="button"
-          class="close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        >
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
         <h2 class="modal-title" id="about-modal-label">About HydroViewer</h2>
       </div>
       <div class="modal-body">
-        <p id="overview">
-          <b>
-            This web application was created to allow users to visualize the
-            results of the global hydrologic model GEOGloWS ECMWF Streamflow
-            Services.
-          </b>
+        <p id="overview" style="color:#b5001a;">
+            <strong>AVISO LEGAL:<strong/>
+            “Este producto contiene estimaciones de caudal histórico y pronosticado para los
+            siguientes días en base a simulaciones del modelo GEOGloWS a escala nacional. Estas
+            simulaciones no han sido contrastadas con información observada. El uso del portal
+            se realizará bajo la única y exclusiva responsabilidad del usuario.
+            Mayor información en: https://geoglows.ecmwf.int/”
         </p>
-        <h3>How it works</h3>
-        <h6>1. Click on any of the stream reaches within the watershed.</h6>
-        <h6>
-          2. A hydrograph for the selected reach with the most current
-          streamflow result will be displayed in the graph area next to the map.
-        </h6>
-        <h6>
-          3. If previous dates are available, the Select Date dropdown will be
-          displayed on top of the graph. Select any of the available dates to
-          display the forecast for that specific date in the graph.
-        </h6>
-        <h6>4. Click the close button to exit the application.</h6>
 
-        <h5>Additional Resources:</h5>
-        <p>
-          <a href="https://geoglows.ecmwf.int/documentation" target="_blank"
-            >GEOGloWS ECMWF Global Forecasts</a
-          >
+        <b>
+          Hydroviewer-Perú es una aplicación que permite la visualización de pronósticos de caudal para cualquier
+          río localizado en Perú.
+
+        </b>
         </p>
+          <p>Los usuarios pueden hacer clic en cualquier río del mapa para obtener datos de pronósticos de caudal.</p>
+          <ol>
+            <li> La primera pestaña muestra el gráfico del pronóstico que proviene de 51 simulaciones de baja resolución
+              y una de alta resolución.</li>
+            <li> La segunda pestaña muestra la simulación histórica de los últimos 40 años. </li>
+            <li> La tercera pestaña muestra: curva de duración de caudales, estacionalidad diaria y estacionalidad mensual
+              basadas en la simulación histórica.</li>
+            <li>La cuarta pestaña permite la descarga de resultados del pronóstico y la simulación histórica.</li>
+          </ol>
+
+        <h5>Recursos Adicionales:</h5>
+        <p><a href="https://www.ecmwf.int/en/about/what-we-do/global-forecasts" target="_blank">ECMWF Global Forecasts</a></p>
+        <p><a href=" user_manual " target="_blank">Manual de Usuarios</a></p>
+        <p><a href=" technical_manual " target="_blank">Manual Técnico</a></p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">

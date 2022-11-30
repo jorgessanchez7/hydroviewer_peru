@@ -1428,3 +1428,27 @@ def get_station_directories(request):
     except Exception as e:
         print(str(e))
         return JsonResponse({'error': 'An unknown error occurred while retrieving build data search.'})
+
+@controller(name='user_manual',url=f'{base_url}/user_manual')
+def user_manual(request):
+    """
+    Controller for the technical manual page.
+    """
+
+    context = {
+        #"base_name": base_name,
+    }
+
+    return render(request, '{0}/user_manual.html'.format(base_name), context)
+
+@controller(name='technical_manual',url=f'{base_url}/technical_manual')
+def technical_manual(request):
+    """
+    Controller for the technical manual page.
+    """
+
+    context = {
+        #"base_name": base_name,
+    }
+
+    return render(request, '{0}/technical_manual.html'.format(base_name), context)
