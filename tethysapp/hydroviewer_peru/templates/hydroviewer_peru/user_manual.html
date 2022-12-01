@@ -28,134 +28,182 @@
 
 {% block app_content %}
 <center><h1 style="color:#20295c;"><strong>Manual de Usuario</strong></h1></center>
-<center><h1 style="color:#20295c;">HYDROVIEWER PERU</h1></center>
 
-<center><img id="logo"  src="{% static 'hydroviewer_peru/images/hydroviewer_peru_logo.jpeg' %}"
-     style="width: 100px;"></center>
 
-<p>Este website contiene una guía para el manejo de la aplicación <strong>Hydroviewer Peru</strong>, alojada
-  en la  plataforma tethys de SENAMHI.
+  <table width="100%"  align="center" bgcolor="#00374b">
+    <tr>
+     <td><h5 style="color:#ffffff;"><center><h1>HydroViewer Perú</h1></center></td>
+    </tr>
+  </table>
+
+      <center>
+        <img id="logo"
+            src="{% static 'hydroviewer_peru/images/hydroviewer_peru_logo.jpeg' %}"
+            style="width: 100px;">
+      </center>
+
+<p>Este website contiene una guía para el manejo de la aplicación <strong>Hydroviewer Perú</strong>, alojada
+  en la  plataforma GEOGloWS SENAMHI Tethys.
 Tethys fue probada mediante la implementación de portales web para socios de la iniciativa de sostenibilidad del agua del
 Grupo de Observaciones de la Tierra (GEO) y de la Universidad Brigham Young University (BYU).
 En Perú, la implementación y personalización de la aplicación ha sido posible con la colaboración del
-SENAMHI, Conservación Amazónica y el Centro Internacional de Agricultura Tropical (CIAT), mediante el programa SERVIR-Amazonia.</p>
+SENAMHI, Conservación Amazónica (ACCA), el Centro Internacional de Agricultura Tropical (CIAT), mediante el programa SERVIR-Amazonia.</p>
 
-<h6><strong>Información General</strong> </h6>
+   <p style="border-ridge: #0f0fef 1px;"><h6><strong>Información General</strong></h6></p>
 
 <p>Hydroviewer Perú muestra el pronóstico de caudal para cualquier río en el Perú. La red de ríos obtenida
   resulta de la extracción de ríos global del GEOGloWS ECMWF. </p>
 
-  <center><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewerpag.png' %}"
+  <center><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/hydroviewer_init.png' %}"
      style="width: 700px;"></center>
 
 <p><strong>En el Hydroviewer Perú se puede visualizar pronóstico de caudal con un horizonte de 15 días y para
   cualquier río en el Perú, los cuales se visualizan de color azul.</strong></p>
 
 <p>Además, puede visualizar las alertas las cuales son triángulos de diferentes colores en función del período de
-  retorno que ha sido excedido por la media del pronóstico en cualquier momento con 15 días de antelación.</p>
+  retorno que ha sido excedido por la media del pronóstico en cualquier momento con 15 días de antelación. Como se
+muestra en el siguiente gràfico, con un triángulo de color amarillo se identifica un evento de inundación con un
+periodo de retorno de 2 años.</p>
 
 
- <center><p><img src="{% static 'hydroviewer_peru/images/imgs/panelcuencas.png' %}"
-     style="width: 100px;"></p> </center>
-
-<p>Al seleccionar los botones de las alertas, en caso de existir alguna en el mapa base se observarán triángulos de
-  alerta según el periodo de retorno como se muestra en la imagen:</p>
-
- <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer-alertas.png' %}"
+ <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/alarmas.png' %}"
      style="width: 500px;"></p> </center>
 
-<p>En el siguiente ejemplo, se muestra una alerta generada para un periodo de retorno de 2 años en el <strong>Río Yaupi</strong>,
-  localizado en la provincia de Morona Santiago.</p>
 
-<center><p><img src="{% static 'hydroviewer_peru/images/imgs/alertarioyaupi2anios.png' %}"
+<p>En la pantalla de visualización pueden observar los botones desplegables para seleccionar una región de interés:</p>
+
+  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/region.png' %}"
      style="width: 500px;"></p> </center>
 
-<p>En la pantalla de visualización puede observar los botones desplegables para seleccionar una provincia de interés:</p>
+<p>En la pantalla de visualización pueden observar los botones desplegables para seleccionar una provincia de interés:</p>
 
-  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/provincias.png' %}"
-     style="width: 200px;"></p> </center>
-
-<p>En la imagen de ejemplo, se muestra la selección para la provincia de <strong>Morona Santiago.</strong></p>
-  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/provinciasejemplo.png' %}"
+  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/provincia.png' %}"
      style="width: 500px;"></p> </center>
 
-<p>También puede seleccionar una cuenca, en el ejemplo de la imagen se muestra la demarcación:</p>
+<p>También puede seleccionar una cuenca,como la imagen que se muestra:</p>
 
-  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/ejemplodemarcacion.png' %}"
+  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/cuenca.png' %}"
      style="width: 500px;"></p> </center>
 
-<p>Para seleccionar un río de interés, puede encontrarlo por su ID o coordenadas. Una vez seleccionado el río se
-  desplegará una pantalla emergente con la identificación del río.</p>
-   <center><p><img src="{% static 'hydroviewer_peru/images/imgs/id_station.png' %}"
+<p> Y también puede seleccionar una subcuenca de interés:</p>
+
+  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/subcuenca.png' %}"
      style="width: 500px;"></p> </center>
 
- <p> Posteriormente, se visualizará una ventana emergente con 4 pestañas: pronóstico, simulación histórica,
+
+<p>Para seleccionar un punto de interés, puede encontrarlo por el nombre de la estación mediante el cuadro de búsqueda.</p>
+
+  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/busqueda.png' %}"
+     style="width: 500px;"></p> </center>
+
+<p> También puede visualizar datos en tiempo real, seleccionando cualquier punto rojo que corresponde a las estaciones de
+  SENAMHI. Una vez seleccionado el punto de interés, se desplegará una ventana emergente con datos de nivel de agua
+  los cuales pueden ser descargados haciendo clic en el ícono de cámara y en la pestaña <strong>Download</strong> de la misma
+ventana emergente en formato csv.</p>
+
+   <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/datos_tiempo_real.png' %}"
+     style="width: 500px;"></p> </center>
+
+
+ <p> Con el fin de visualizar los pronósticos, puede hacer clic en cualquier río de Perú.Posteriormente,
+   se visualizará una ventana emergente con 4 pestañas: pronóstico, simulación histórica,
   estadísticos y descarga.</p>
 
   <center><p><img src="{% static 'hydroviewer_peru/images/imgs/botonesventanaemergente.png' %}"
      style="width: 300px;"></p> </center>
 
-<ol>
-<h5 style="color:#20295c;"><strong><li>Pronósticos </li></strong></h5>
+
+  <table width="100%"  align="center" bgcolor="#00374b">
+    <tr>
+     <td><h5 style="color:#ffffff;"><strong>1.Pronósticos </strong></h5></td>
+    </tr>
+  </table>
+
 
   <p>El pronóstico proviene de 51 simulaciones diferentes y uno de alta resolución, incluye los
   períodos de retorno que se activan de forma predeterminada cuando la previsión supera un umbral. Los valores de umbral
   del período de retorno se muestran al pasar el cursor sobre ellos en el borde derecho del gráfico.</p>
 
-  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/forecast.png' %}"
+  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/forecast.png' %}"
      style="width: 500px;"></p> </center>
 
-<p>A continuación se describe cada una de las partes visualizado en la ventana emergente de pronóstico:</p>
+<p>A continuación, se describe cada una de las partes visualizadas en la ventana emergente de pronóstico:</p>
 
-  <ol>
-<li><strong>Calendario:</strong> puede seleccionar un pronóstico anterior al de la fecha, hasta con un periodo de
-  40 días aproximadamente.</li>
+<p><strong> Date (Calendario):</strong> puede seleccionar un pronóstico anterior al de la fecha, hasta con un periodo de
+  40 días aproximadamente.</p>
 
-<li> Se muestra el pronóstico con una previsión para 15 días, y se muestran los periodos de retorno. Incluye el
-  promedio, los percentiles de caudal 25-75, los caudales máximo y mínimo, y un único pronóstico de mayor resolución.</li>
+      <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/fechas.png' %}"
+     style="width: 500px;"></p> </center>
 
-    <li>La leyenda se puede ver a la derecha y las diferentes capas se pueden activar y desactivar. El valor real de caudal
-  de datos para cada período de tiempo se puede mostrar al pasar el cursor sobre el gráfico. </li>
-    <li>Todos los gráficos  desplegados en la ventana emergente presentan una barra en la esquina superior derecha de los mismos: descarga en la
+<p> El gráfico desplegado muestra el pronóstico con una previsión para 15 días, y se muestran los periodos de retorno. Incluye el
+  promedio, los percentiles de caudal 25-75, los caudales máximo y mínimo, y un único pronóstico de mayor resolución.</p>
+<p>En la parte inferior de la ventana emergente desplegada se puede visualizar un cuadro del porcentaje de Ensambles
+  que exceden el periodo de retorno.</p>
+<p>La leyenda se puede ver a la derecha y las diferentes capas se pueden activar y desactivar. El valor real de caudal
+  de datos para cada período de tiempo se puede mostrar al pasar el cursor sobre el gráfico. </p>
+<p>Todos los gráficos  desplegados en la ventana emergente presentan una barra en la esquina superior derecha de los mismos: descarga en la
   opción de la cámara, zoom, pan, zoom in, zoom out, autoscale, reset axes.</li>
 
   <center><p><img src="{% static 'hydroviewer_peru/images/imgs/botonesdescargagrafico.png' %}"
      style="width: 500px;"></p> </center>
 
-<li>En la parte inferior de la ventana emergente desplegada se puede visualizar un cuadro del porcentaje de Ensambles
-  que exceden el periodo de retorno.</li>
-    </ol>
 
-<h5 style="color:#20295c;"><strong><li>Simulación histórica</li></strong></h5>
+  <table width="100%"  align="center" bgcolor="#00374b">
+    <tr>
+     <td><h5 style="color:#ffffff;"><strong>2.Simulación histórica </strong></h5></td>
+    </tr>
+  </table>
+
+
 <p>El gráfico desplegado en esta opción es la simulación histórica de los últimos 40 años. Los diferentes colores en el
   gráfico representan los diferentes períodos de retorno que se calculan a partir de la simulación histórica de 40 años.
   Los periodos de retorno pueden ser activados o desactivados según considere. También puede realizar zoom en un fecha
   específica utilizando el cursor del mouse.</p>
 
-  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/historicalsimulation.png' %}"
+      <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/historical simulation.png' %}"
      style="width: 500px;"></p> </center>
 
 
-<h5 style="color:#20295c;"><strong><li>Estadísticas de simulación histórica</li></h5>
+
+  <table width="100%"  align="center" bgcolor="#00374b">
+    <tr>
+     <td><h5 style="color:#ffffff;"><strong>3.Estadìstica de simulación histórica </strong></h5></td>
+    </tr>
+  </table>
+
+
 <p>En esta opción se puede observar: curva de duración de caudales, estacionalidad diaria y estacionalidad mensual.</p>
 
-  <center><p><img src="{% static 'hydroviewer_peru/images/imgs/historicalsimulationstatistics.png' %}"
+      <center><p><img src="{% static 'hydroviewer_peru/images/imgs/hydroviewer/historical simulation statitics.png' %}"
      style="width: 500px;"></p> </center>
 
-  <h5 style="color:#20295c;"><strong><li>Descarga</li></strong></strong></h5>
+
+<table width="100%"  align="center" bgcolor="#00374b">
+    <tr>
+     <td><h5 style="color:#ffffff;"><strong>4.Descarga </strong></h5></td>
+    </tr>
+  </table>
+
 <p>En esta opción le permite descargar el pronóstico y la simulación histórica en formato .csv</p>
 
   <center><p><img src="{% static 'hydroviewer_peru/images/imgs/descargadatoscsv.png' %}"
      style="width: 500px;"></p> </center>
 </ol>
 
-<h5 style="color:#20295c;"><strong>Páginas de Interés</strong></h5>
+
+  <table width="100%"  align="center" bgcolor="#00374b">
+    <tr>
+     <td><h5 style="color:#ffffff;"><strong>Páginas de Interés </strong></h5></td>
+    </tr>
+  </table>
+
 <p>Página de SENAMHI: <a class="reference external" href="https://www.senamhi.gob.pe/" target="_blank">SENAMHI</a></p>
 <p>Página de SERVIR-Amazonia: <a class="reference external" href="https://servir.ciat.cgiar.org/?lang=es" target="_blank">SERVIR-Amazonia</a></p>
 <p>Página de Conservación Amazónica: <a class="reference external" href="https://www.acca.org.pe/" target="_blank">Conservación Amazónica – ACCA</a></p>
 <p>Página de Laboratorio de Hydroinformática Brigham Young University: <a class="reference external" href="https://hydroinformatics.byu.edu/" target="_blank">Página BYU</a></p>
 <p>Video de Brigham Young University-GEOGloWS: <a class="reference external" href="https://youtu.be/PLG8U8AQmXY" target="_blank">Video BYU</a></p>
 
+<p>Video Inundaciones: <a class="reference external" href="https://youtu.be/mWj-7GcvXrA" target="_blank">Video Inundaciones</a></p>
 
 </div>
 
